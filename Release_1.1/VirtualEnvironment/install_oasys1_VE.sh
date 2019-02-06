@@ -4,16 +4,16 @@
 #
 # script to install OASYS in a LINUX virtual environment (sudo is not required)
 #
-# Before starting make sure that your system has installed: 
+# Before starting make sure that your system has installed:
 #      - python3
 #      - virtualenv
 #      - qt and pyqt
 #   If any of these items is not present in your system, contact the
-#   system administrator and ask for their installation.     
-#   
-# Then place this script in a suitable directory (e.g., $HOME/OrangeVE) and run 
-# this script automatically (it may take a very ling time) or manually by 
-# copy/paste line by line, if you want to detect possible errors). 
+#   system administrator and ask for their installation.
+#
+# Then place this script in a suitable directory (e.g., $HOME/OrangeVE) and run
+# this script automatically (it may take a very ling time) or manually by
+# copy/paste line by line, if you want to detect possible errors).
 #
 # Then start oasys by:
 #   source ./oasys1env/bin/activate
@@ -27,12 +27,12 @@
 # step 0: some local needs, like for ESRF proxy and clean all stuff
 #
 
-# proxy 
+# proxy
 #export all_proxy=http://proxy.esrf.fr:3128/
 
 # clean old stuff
 echo "Cleaning old installation files..."
-rm -rf =* xraylib* 
+rm -rf =* xraylib*
 # clean old virtual environment
 rm -rf ~/oasys1env
 
@@ -40,7 +40,7 @@ rm -rf ~/oasys1env
 # step 1: create and start python3 virtual environment
 #
 
-virtualenv --system-site-packages ~/oasys1env
+virtualenv --system-site-packages ~/oasys1env -p python3
 source ~/oasys1env/bin/activate
 
 pip install resources --upgrade
